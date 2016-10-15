@@ -1,0 +1,16 @@
+#This is the default .gitignore file created by 'newrepo'
+
+# gradle resources
+build/*
+.gradle/*
+gradle/*
+gradlew
+gradlew.bat
+settings.gradle
+
+# IDE information
+.idea/*
+
+# telegram api tokens
+token
+

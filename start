@@ -1,0 +1,4 @@
+#!/bin/bash
+dir="$(dirname $0)"
+token="$(<$dir/token)"
+screen -S factorizerbot -d -m java -jar $(dirname $0)/build/libs/*.jar $token
