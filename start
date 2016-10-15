@@ -1,4 +1,5 @@
 #!/bin/bash
-dir="$(dirname $0)"
-token="$(<$dir/token)"
-screen -S factorizerbot -d -m java -jar $(dirname $0)/build/libs/*.jar $token
+path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+token="$(<$path/token)"
+screen -S $(basename $path) -d -m java -jar $path/build/libs/*.jar $token
+screen -ls
