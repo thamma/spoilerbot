@@ -94,17 +94,20 @@ public class SpoilerBot extends TelegramLongPollingBot {
     private void handleIncomingInlineQuery(InlineQuery inlineQuery) {
         String query = inlineQuery.getQuery();
         System.out.println(query);
+
         AnswerInlineQuery out = new AnswerInlineQuery();
-        out.setCacheTime(86400);
+        out.setCacheTime(1000);
         out.setInlineQueryId(inlineQuery.getId());
         List<InlineQueryResult> list = new ArrayList<>();
 
         InlineQueryResultArticle inlineQueryResult = new InlineQueryResultArticle();
         inlineQueryResult.setReplyMarkup(getKeyboard());
         inlineQueryResult.setDescription("descr");
-        inlineQueryResult.setId(Integer.toString(1));
+        inlineQueryResult.setId(Integer.toString(2));
         inlineQueryResult.setTitle("title");
-        inlineQueryResult.setUrl("https://i.ytimg.com/vi/9TcMA7IJU3o/maxresdefault.jpg");
+        inlineQueryResult.setUrl("http://vignette4.wikia.nocookie.net/fallout/images/c/c3/Fallout3e.jpg");
+
+        //out.set
 
         out.setResults(list);
 
